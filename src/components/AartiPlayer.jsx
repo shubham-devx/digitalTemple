@@ -7,7 +7,7 @@ export default function AartiPlayer({ deity }) {
 
   const playAarti = () => {
     if (!audioRef.current) {
-      audioRef.current = new Audio(`/${deity}.mp3`);
+      audioRef.current = new Audio(`/${deity}.mpeg`);
     }
 
     audioRef.current.play();
