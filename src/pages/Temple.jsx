@@ -80,7 +80,7 @@ import FlowerOffer from "../components/FlowerOffer";
 import VirtualAarti from "../components/VirtualAarti";
 import AartiPlayer from "../components/AartiPlayer";
 import deityData from "../data/deityData";
-
+import NariyalOffer from "../components/NariyalOffer";
 export default function Temple(){
 
 const { name } = useParams();
@@ -123,7 +123,9 @@ className="deity"
 <div className="pos-bell">
 <Bell/>
 </div>
-
+<div className="pos-nariyal">
+<NariyalOffer/>
+</div>
 <div className="pos-diya">
 <Diya/>
 </div>
