@@ -1,3 +1,5 @@
+
+
 import { useState } from "react";
 
 export default function FlowerOffer() {
@@ -23,8 +25,17 @@ return(
 {show && (
 <div className="flower-container">
 
-{Array.from({length:30}).map((_,i)=>(
-<span key={i}>🌸</span>
+{Array.from({length:80}).map((_,i)=>(
+<span
+key={i}
+style={{
+left: Math.random()*100 + "%",
+animationDuration: (3 + Math.random()*3) + "s",
+fontSize: (18 + Math.random()*12) + "px"
+}}
+>
+🌸
+</span>
 ))}
 
 </div>
@@ -45,18 +56,7 @@ z-index:100;
 .flower-container span{
 position:absolute;
 top:-10%;
-font-size:22px;
-animation:fall 5s linear infinite;
-}
-
-.flower-container span:nth-child(odd){
-left:20%;
-animation-duration:6s;
-}
-
-.flower-container span:nth-child(even){
-left:70%;
-animation-duration:4s;
+animation:fall linear infinite;
 }
 
 @keyframes fall{
@@ -80,3 +80,4 @@ opacity:0;
 )
 
 }
+
